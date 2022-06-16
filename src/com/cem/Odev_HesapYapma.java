@@ -9,15 +9,15 @@ public class Odev_HesapYapma {
 //      System.out.println((int) '2' - 48);
 //      System.out.println((int) '3' - 48);
 
-		System.out.println("Enter text ");
+		System.out.println("Yapilmasi istenen islemi yazin ");
 		Scanner sc = new Scanner(System.in);
-		String text = sc.nextLine();
+		String metin = sc.nextLine();
 		int sayi1 = 0;
 		int sayi2 = 0;
 		int sonuc = 0;
 		String islem = "";
 
-		for (String cumle : text.split(" ")) {
+		for (String cumle : metin.split(" ")) {
 			if (cumle.contains("topla")) {
 				islem = "topla";
 			} else if (cumle.contains("çıkar")) {
