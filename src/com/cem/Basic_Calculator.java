@@ -118,18 +118,17 @@ public class Basic_Calculator {
 	public static void bol() {
 		Scanner scanner = new Scanner(System.in);
 		String input = "";
-		double sayi1;
-		double sayi2;
-		double bolum = 1;
+		double sayi;
+		double bolum = 1.0;
 
-		System.out.println("Lutfen bir sayi girin");
-		sayi1 = scanner.nextDouble();
-
-		System.out.println("Lutfen bir sayi daha girin");
-		sayi2 = scanner.nextDouble();
-
-		bolum = sayi1 / sayi2;
-
+		do {
+			System.out.println("Lutfen bir sayi girin");
+			sayi = scanner.nextDouble();
+			scanner.nextLine();
+			bolum = bolum / sayi;
+			System.out.println("Islemi sonlandirmak icin = tusuna basin.");
+			input = scanner.nextLine();
+		} while (!input.equals("="));
 		System.out.println("Bolum: " + bolum);
 	}
 

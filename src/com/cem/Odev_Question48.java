@@ -32,10 +32,10 @@ public class Odev_Question48 {
 		// plakaYazdir("Ankara", "Bolu", "Kars", "Batman");
 		// sesliHarfSil();
 		// ucNokta();
-		String[] yeniDizi = sesliHarfleriSil();
+		// String[] yeniDizi = sesliHarfleriSil();
 		// kisaltma(yeniDizi);
-		bIleBaslayan(yeniDizi);
-		// ilkUcBuyuk();
+		// bIleBaslayan(yeniDizi);
+		ilkUcBuyuk();
 
 	}
 
@@ -165,7 +165,7 @@ public class Odev_Question48 {
 		int sayac = 1;
 		for (int i = 0; i < iller.length; i++) {
 			if (dizi[i].startsWith("B")) {
-				System.out.println(sayac + "-" + iller[i]);
+				System.out.println(sayac + "-" + dizi[i]);
 				sayac++;
 			}
 		}
@@ -175,7 +175,7 @@ public class Odev_Question48 {
 
 		for (int i = 0; i < iller.length; i++) {
 			if (iller[i].charAt(1) == 'a')
-				System.out.println(iller[i].substring(0, 3).toUpperCase());
+				System.out.println(iller[i] + " - " + iller[i].substring(0, 3).toUpperCase());
 		}
 	}
 }
