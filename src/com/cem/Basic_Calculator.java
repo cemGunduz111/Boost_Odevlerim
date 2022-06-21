@@ -125,9 +125,13 @@ public class Basic_Calculator {
 			System.out.println("Lutfen bir sayi girin");
 			sayi = scanner.nextDouble();
 			scanner.nextLine();
-			bolum = bolum / sayi;
-			System.out.println("Islemi sonlandirmak icin = tusuna basin.");
-			input = scanner.nextLine();
+			if (sayi == 0)
+				System.out.println("0'dan farkli bir sayi giriniz.");
+			else {
+				bolum = bolum / sayi;
+				System.out.println("Islemi sonlandirmak icin = tusuna basin.");
+				input = scanner.nextLine();
+			}
 		} while (!input.equals("="));
 		System.out.println("Bolum: " + bolum);
 	}
@@ -163,16 +167,19 @@ public class Basic_Calculator {
 		System.out.print("Sayi girin: ");
 		sayi = scan.nextInt();
 
-		for (int i = 2; i < sayi; i++) {
-			if (sayi % i == 0) {
-				sayac++;
+		if (sayi <= 1)
+			System.out.println("Gecerli bir sayi girin.");
+		else {
+			for (int i = 2; i < sayi; i++) {
+				if (sayi % i == 0)
+					sayac++;
+			}
+			if (sayac == 0) {
+				System.out.println(sayi + " sayisi asaldir.");
+			} else {
+				System.out.println(sayi + " sayisi asal degildir.");
 			}
 		}
-		if (sayac == 0) {
-			System.out.println(sayi + " sayisi asaldir.");
-		} else {
-			System.out.println(sayi + " sayisi asal degildir.");
-		}
-	}
 
+	}
 }
