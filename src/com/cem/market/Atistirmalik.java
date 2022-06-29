@@ -7,6 +7,7 @@ public class Atistirmalik extends Urun {
 	double kalori;
 
 	public static Atistirmalik atistirmalikEkle() {
+
 		Atistirmalik atistirmalik = new Atistirmalik();
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Ürün adý gir: ");
@@ -16,12 +17,12 @@ public class Atistirmalik extends Urun {
 		System.out.print("Ürün stoðu gir: ");
 		int stok = scanner.nextInt();
 		System.out.print("Ürün kalorisini gir: ");
-		double litre = scanner.nextDouble();
+		double kalori = scanner.nextDouble();
 
 		atistirmalik.birimFiyat = fiyat;
 		atistirmalik.urunAdi = ad;
 		atistirmalik.stok = stok;
-		atistirmalik.kalori = litre;
+		atistirmalik.kalori = kalori;
 		atistirmalik.kategori = "Atýþtýrmalýk";
 
 		return atistirmalik;
